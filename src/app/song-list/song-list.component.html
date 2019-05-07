@@ -1,0 +1,6 @@
+
+ <ul>
+   <li *ngFor="let song of list">
+    {{song.album.title}} : {{song | json}}
+   </li>
+ </ul>

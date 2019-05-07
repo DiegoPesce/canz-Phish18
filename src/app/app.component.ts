@@ -11,14 +11,14 @@ import { Song } from './song.model';
 })
 
 export class AppComponent {
-  
+
   title = "Benvenuti al canzoniere";
   albums = AlbumList;
   selectedAlbum: Album = AlbumList[0];
   songList: Song[];
- 
 
   constructor() { }
+  
   ngOnInit() {
     this.songList = new Array <Song>();
   }

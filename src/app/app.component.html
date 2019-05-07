@@ -12,19 +12,10 @@
     durata : <input #l> <br>
     data pubblicazione: <input type = "date" #d> <br>
 
-    <button (click)= "onClick(t,d,l)"> Prenota </button>
+    <button (click)= "onClick(t,d,l)"> Aggiungi </button>
 
   </form>
 
+<app-dettagli-album [album]="selectedAlbum"></app-dettagli-album>
 
-  {{selectedRoom | json}}
-
- <ul>
-   <li *ngFor="let song of songList">
-    {{song.album.title}} : {{song | json}}
-   </li>
- </ul> 
- 
-
- {{songList | json}}
-
+<app-song-list [list]="songList"></app-song-list>
